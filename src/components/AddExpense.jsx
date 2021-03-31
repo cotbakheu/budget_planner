@@ -35,7 +35,7 @@ const AddExpenseForm = () => {
                         className='form-control'
                         id='name'
                         value={name}
-                        onChange={(event => setName(event.target.value))}
+                        onChange={event => setName(event.target.value)}
                     ></input>
                 </div>
                 <div className='col-sm'>
@@ -46,7 +46,7 @@ const AddExpenseForm = () => {
                         className='form-control'
                         id='cost'
                         value={cost}
-                        onChange={(event => setCost(event.target.value))}
+                        onChange={event => setCost(event.target.value)}
                     ></input>
                 </div>
             </div>
