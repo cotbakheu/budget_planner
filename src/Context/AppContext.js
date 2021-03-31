@@ -1,7 +1,17 @@
 import { createContext, useReducer } from "react";
 
 const AppReducer = (state, actions) => {
-	switch (state.type) {
+	switch (actions.type) {
+		case 'ADD_EXPENSE':
+			return 	{
+				...state, 
+				expenses: [...state.expenses, actions.payload]
+			};
+		case 'DEL_EXPENSE': 
+			return {
+				...state,
+				expenses: state.expenses.filter((el)=> el.id !== actions.payload)
+			}
 		default:
 			return state;
 	}
